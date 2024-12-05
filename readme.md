@@ -46,22 +46,6 @@ Compile the Project: Run the following command in the root directory:
 
 
 
-#  HIGH LEVEL DESIGN OVERVIEW
- +----------------+           +----------------+           +-------------------+
- |  User Interface| <-------> |  Order Manager | <-------> |  API Client       |
- +----------------+           +----------------+           +-------------------+
-         |                          |                             |
-         v                          v                             v
-  [Place Order, Cancel Order]  [Place/Modify/Cancel]      [Communicate with]
-           |                        |                             |
-           v                        v                             v
-   +----------------------------+  +------------------------+   +--------------------+
-   | External Trading API       |  | API Response           |   | API Response       |
-   | (place, modify, cancel, view)|  | (confirmation or  |   | (order status or failure)|
-   +----------------------------+  | failure)             |   +--------------------+
-               |                                                   |
-               +---------------------------------------------------+
-                        [API Response: Success or Failure]
 
 
 
